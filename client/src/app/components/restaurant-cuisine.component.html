@@ -1,0 +1,9 @@
+<h1>List of Restaurants</h1>
+
+<mat-card *ngFor="let r of restaurantList" [routerLink]="['/', r.name,'details']">
+    <mat-card-content>
+      <p>
+        <span>{{ r.name }}</span>
+      </p>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,2 @@
+TODO: Task 1 - Write the mongo import command here
+mongoimport --uri=mongodb://mongo:Uetaxpl7v1nmOkFf2c7N@containers-us-west-66.railway.app:7321/?authSource=admin --drop -dvttptest4 -crestaurants --jsonArray C:\portableWorkspace\csf-assessment-template\restaurants.json

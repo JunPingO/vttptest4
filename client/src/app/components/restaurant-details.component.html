@@ -1,0 +1,58 @@
+<h1>restaurants details</h1>
+
+<mat-card >
+    <mat-card-content>
+      <p>
+        <span>Name: {{ restaurantDetail.name }}</span>
+      </p>
+    </mat-card-content>
+    <mat-card-content>
+        <p>
+          <span>Cuisine: {{ restaurantDetail.cuisine }}</span>
+        </p>
+      </mat-card-content>
+      <mat-card-content>
+        <p>
+          <span>Address: {{ restaurantDetail.address }}</span>
+        </p>
+      </mat-card-content>
+      <mat-card-content>
+        <p>
+          <span>Map: {{ mapurl }}</span>
+        </p>
+      </mat-card-content>
+</mat-card>
+
+<form [formGroup]="form" (ngSubmit)="postComment()">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" size="50" id="name" placeholder="Your name" formControlName="name">
+            </td>
+        </tr>
+        <tr>
+            <td>Rating:</td>
+            <td>
+                <select id="sauce" formControlName="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Comments:</td>
+            <td>
+                <textarea id="comments" formControlName="comments"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" [disabled]="!form.valid">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
